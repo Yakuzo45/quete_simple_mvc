@@ -1,6 +1,6 @@
 <?php
 // src/Controller/ItemController.php
-require __DIR__ . '/../Model/ItemManager.php';
+require __DIR__ . '/../Model/itemManager.php';
 
 $items = selectAllItems();
 
