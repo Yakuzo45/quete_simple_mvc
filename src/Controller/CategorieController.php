@@ -12,7 +12,7 @@ class CategorieController
     {
         $CategorieManager = new CategorieManager();
         $Categorie = $CategorieManager->selectAllItems();
-        require __DIR__ . '/../View/showCategorie.php';
+        require __DIR__ . '/../View/categories.php';
     }
 
     public function show($id)
