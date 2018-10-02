@@ -1,0 +1,16 @@
+{
+    "name": "wilder7/quete_simple_mvc",
+    "authors": [
+        {
+            "name": "tom",
+            "email": "tom.guibard45@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    }
+
+}
