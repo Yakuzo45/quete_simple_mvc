@@ -7,6 +7,7 @@ $routesCollection = function (FastRoute\RouteCollector $r) use ($routes) {
             $r->addRoute($action[2], $action[1], [$controller,$action[0]]);
         } }};
 
+
 $dispatcher = FastRoute\simpleDispatcher($routesCollection);
 
 // Fetch method and URI from somewhere
@@ -24,6 +25,7 @@ switch ($routeInfo[0]) {
     case FastRoute\Dispatcher::NOT_FOUND:
         // ... 404 Not Found
         header("HTTP/1.0 404 Not Found");
+        echo 'Page introuvable';
         break;
     case FastRoute\Dispatcher::METHOD_NOT_ALLOWED:
         $allowedMethods = $routeInfo[1];

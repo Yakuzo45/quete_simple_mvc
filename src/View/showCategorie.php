@@ -11,12 +11,12 @@
 <html>
 <head> ... </head>
 <body>
-   <main>
-    <h1>Item <?= $items['title'] ?></h1>
-<ul>
-    <li>Id : <?= $items['id'] ?></li>
-</ul>
-<a href='/'>Back to list</a>
+<main>
+    <h1>Categorie <?= $Categorie['name'] ?></h1>
+    <ul>
+        <li>Id : <?= $Categorie['id'] ?></li>
+    </ul>
+    <a href='/'>Back to list</a>
 </main>
 </body>
 </html>
