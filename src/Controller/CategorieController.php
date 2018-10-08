@@ -3,16 +3,25 @@
 namespace Controller;
 
 use Model\CategorieManager;
-
+use Twig_Loader_Filesystem;
+use Twig_Environment;
 
 
 class CategorieController
 {
+    private $twig;
+
+    public function __construct()
+    {
+        $loader = new Twig_Loader_Filesystem(__DIR__.'/../View');
+        $this->twig = new Twig_Environment($loader);
+    }
+
     public function index()
     {
         $CategorieManager = new CategorieManager();
         $Categorie = $CategorieManager->selectAllItems();
-        require __DIR__ . '/../View/categories.php';
+        return $this->twig->render('Categorie/categories.html.twig', ['categorie' => $Categorie]);
     }
 
     public function show($id)
@@ -20,7 +29,7 @@ class CategorieController
         $CategorieManager = new CategorieManager();
         $Categorie = $CategorieManager->selectOneItem($id);
 
-        require __DIR__ . '/../View/showCategorie.php';
+        return $this->twig->render('Categorie/categorie.html.twig', ['categorie' => $Categorie]);
 
     }
 }

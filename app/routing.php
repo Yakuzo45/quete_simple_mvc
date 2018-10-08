@@ -7,6 +7,6 @@ $routes = [
     ],
     'Categorie' => [ // Controller
         ['index', '/categories', 'GET'],
-        ['show', '/categories/{id}', 'GET'], // action, url, HTTP method
+        ['show', '/categorie/{id}', 'GET'], // action, url, HTTP method
     ],
 ];
