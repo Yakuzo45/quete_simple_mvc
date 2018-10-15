@@ -1,12 +1,23 @@
 <?php
-// routing.php
+/**
+ * This file hold all routes definitions.
+ *
+ * PHP version 7
+ *
+ * @author   WCS <contact@wildcodeschool.fr>
+ *
+ * @link     https://github.com/WildCodeSchool/simple-mvc
+ */
+
 $routes = [
-    'Item' => [ // Controller
-        ['index', '/', 'GET'], // action, url, HTTP method
-        ['show', '/item/{id}', 'GET'], // action, url, HTTP method
+    'Category' => [ // Controller
+        ['add', '/admin/category/add', ['GET', 'POST']], // action, url, method
     ],
-    'Categorie' => [ // Controller
-        ['index', '/categories', 'GET'],
-        ['show', '/categorie/{id}', 'GET'], // action, url, HTTP method
+    'Item' => [ // Controller
+        ['index', '/', 'GET'], // action, url, method
+        ['add', '/item/add', ['GET', 'POST']], // action, url, method
+        ['edit', '/item/edit/{id:\d+}', ['GET', 'POST']], // action, url, method
+        ['show', '/item/{id:\d+}', 'GET'], // action, url, method
+        ['delete', '/item/delete/{id:\d+}', 'GET'], // action, url, method
     ],
 ];

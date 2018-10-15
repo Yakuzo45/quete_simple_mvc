@@ -9,7 +9,7 @@ use Twig_Environment;
 
 class CategorieController
 {
-    private $twig;
+    protected $twig;
 
     public function __construct()
     {
