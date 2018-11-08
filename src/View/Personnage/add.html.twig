@@ -1,0 +1,12 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+    {% if errors is not empty %}
+        {% for error in errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+    {% endif %}
+    <h1>Add a new character</h1>
+    {% include 'Personnage/_form.html.twig' %}
+{% endblock %}
